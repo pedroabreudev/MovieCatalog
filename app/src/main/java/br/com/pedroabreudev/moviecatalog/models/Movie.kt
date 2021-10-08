@@ -18,9 +18,6 @@ data class Movie(
     @SerializedName("release_date")
     val release : String ?,
 
-
-
-
 ) : Parcelable{
     constructor() : this ("", "", "", "")
 }
