@@ -6,17 +6,10 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Movie(
-    @SerializedName("id")
-    val id: String ?,
-
-    @SerializedName("title")
-    val title: String ?,
-
-    @SerializedName("poster_path")
-    val poster : String ?,
-
-    @SerializedName("release_date")
-    val release : String ?,
+    val name: String,
+    val height: String,
+    val gender: String,
+    val mass: String
 
 ) : Parcelable{
     constructor() : this ("", "", "", "")
