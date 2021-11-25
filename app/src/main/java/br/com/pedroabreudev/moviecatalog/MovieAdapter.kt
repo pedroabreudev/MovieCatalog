@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.pedroabreudev.moviecatalog.models.Movie
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.movie_item.view.*
 
 class MovieAdapter(
@@ -13,11 +12,12 @@ class MovieAdapter(
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
         fun bindMovie(movie: Movie) {
-            itemView.movie_title.text = movie.name
-            itemView.movie_release_date.text = movie.gender
-            Glide.with(itemView).load(IMAGE_BASE + movie.mass).into(itemView.movie_poster)
+            itemView.tvName.text = movie.name
+            itemView.tvHeight.text = movie.height +" cm"
+            itemView.tvGender.text = movie.gender
+            itemView.tvMass.text = movie.mass + " kg"
+
         }
     }
 
@@ -30,6 +30,6 @@ class MovieAdapter(
     override fun getItemCount(): Int = movies.size
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bindMovie(movies.get(position))
+        holder.bindMovie(movies[position])
     }
 }

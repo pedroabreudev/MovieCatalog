@@ -1,55 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="400px"
-    android:layout_marginStart="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginBottom="8dp"
-    android:background="#000000">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/transparent"
+    app:cardCornerRadius="5dp"
+    app:cardMaxElevation="2dp"
+    app:strokeColor="@color/white"
+    tools:backgroundTint="@color/black">
 
-    <ImageView
-        android:id="@+id/movie_poster"
-        android:layout_width="300px"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/movie_title"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:maxLines="2"
-        android:text="Movie Title"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/movie_release_date"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Release Date"
-        android:textColor="#FFEB3B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
-        app:layout_constraintTop_toBottomOf="@+id/movie_title"
-        app:layout_constraintVertical_bias="0.864" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:padding="8dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/yellow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Obi-Wan Kenobi" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeight"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:srcCompat="@drawable/ic_android" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivHeight"
+            app:layout_constraintTop_toTopOf="@+id/ivHeight"
+            tools:text="182 cm" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGender"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/ivHeight"
+            app:layout_constraintTop_toBottomOf="@+id/ivHeight"
+            app:srcCompat="@drawable/ic_android" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivGender"
+            app:layout_constraintTop_toTopOf="@+id/ivGender"
+            tools:text="Masculine" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMass"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/ivGender"
+            app:layout_constraintTop_toBottomOf="@+id/ivGender"
+            app:srcCompat="@drawable/ic_android" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivMass"
+            app:layout_constraintTop_toTopOf="@+id/ivMass"
+            tools:text="77 kg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

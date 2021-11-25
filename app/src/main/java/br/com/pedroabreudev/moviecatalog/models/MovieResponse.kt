@@ -6,7 +6,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MovieResponse(
-    @SerializedName("results")
     val results: List<Movie>
 
 ) : Parcelable {
