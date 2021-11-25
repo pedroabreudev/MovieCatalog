@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rv_movies_list.layoutManager = LinearLayoutManager(this)
-        rv_movies_list.setHasFixedSize(true)
+        rvCharacters.layoutManager = LinearLayoutManager(this)
+        rvCharacters.setHasFixedSize(true)
         getMovieData { movies: List<Movie> ->
-            rv_movies_list.adapter = MovieAdapter(movies)
+            rvCharacters.adapter = MovieAdapter(movies)
         }
     }
 

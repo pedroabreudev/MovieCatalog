@@ -22,12 +22,12 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textColor="@color/yellow"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="@id/tvName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="Obi-Wan Kenobi" />
+            tools:text="Obi-Wan Kenobi"
+            android:fontFamily="@font/starwars_jedi"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivHeight"
